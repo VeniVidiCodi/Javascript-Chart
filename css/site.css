@@ -71,7 +71,6 @@ body {
 }
 /* 
 .MainContent-background {
-    /* Location in the Container Grid */
     grid-column: 2;
     grid-row: 2;
     
@@ -87,7 +86,7 @@ body {
 }
 
 /* Point of Focus - Visual Data Set */
-.BarChart-Container {
+.BarChart-container {
     /* Location in the MainContent Grid */
     grid-column: 1;
     grid-row: 2;
@@ -98,7 +97,7 @@ body {
     grid-template-rows: 1fr;
 }
 
-.BarChart-Bar {
+.BarChart-bar {
     grid-row: 1;
     align-self: end;
     text-align: center;
@@ -146,17 +145,26 @@ body {
     grid-column: 1fr 1fr 1fr 1fr 1fr;
     align-self: center;
     justify-self: center;
-    height: 20px;
-    width: 30px;
-    border: 1px solid tomato;
+    height: 30px;
+    width: 40px;
 }
 
-.label-EUR { background-color: blue; }
+.label-EUR { 
 
-.label-USD{ background-color: red; }
+}
 
-.label-GBP { background-color: navy; }
+.label-USD {
 
-.label-AUD { background-color: teal; }
+}
 
-.label-RUB { background-color: lightsalmon; }
+.label-GBP {
+
+}
+
+.label-AUD {
+
+}
+
+.label-RUB { 
+
+}
