@@ -1,0 +1,162 @@
+:root {
+    --navbar-color: #6c7b95;
+    --margin-color: #464159;
+    --mainContentBG-color: #464159;
+}
+/* ColorHunt Palette 165518
+#464159
+#6c7b95
+#8bbabb
+#c7f0db
+ */
+
+
+body {
+    margin: 0;
+    background: url('../img/world-map-halftone-dots-background_153132-185.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+
+.Container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 70px 1fr;
+    min-height: 100vh;
+}
+
+/* Navigation/Header Bar */
+.NavBar {
+    grid-column: 1 / span 3;
+    border: 1px solid black;
+    background-color: var(--navbar-color);
+    z-index: 10;
+}
+
+.NavBar > h1 {
+    margin-top: 15px;
+    text-align: center;
+    color: #c7f0db;
+}
+
+
+/* Page Margins */
+.Margin-Left {
+    grid-column: 1;
+    grid-row: 2;
+
+    /* border: 1px dotted black; */
+    background-color: var(--margin-color);
+    opacity: 0.7;
+}
+
+.Margin-Right {
+    grid-column: 3;
+    grid-row: 2;
+
+    /* border: 1px dotted black; */
+    background-color: var(--margin-color);
+    opacity: 0.7;
+}
+
+
+/* Center section with main content (bar graph) */
+.MainContent {
+    /* Location in the Container Grid */
+    grid-column: 2;
+    grid-row: 2;
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr;
+}
+/* 
+.MainContent-background {
+    /* Location in the Container Grid */
+    grid-column: 2;
+    grid-row: 2;
+    
+    background-color: var(--mainContentBG-color);
+    opacity: 0.9;
+} */
+
+.BarChart-TopSection {
+    /* Location in the MainContent Grid */
+    grid-row: 1;
+    grid-column: 1;
+    /* border: 1px solid black; */
+}
+
+/* Point of Focus - Visual Data Set */
+.BarChart-Container {
+    /* Location in the MainContent Grid */
+    grid-column: 1;
+    grid-row: 2;
+    grid-column-gap: 2px;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.BarChart-Bar {
+    grid-row: 1;
+    align-self: end;
+    text-align: center;
+
+    background-color: white;
+    /* color: white; */
+    padding-top: 10px;
+}
+
+.EUR {
+    background-color: #8bbabb;
+}
+
+.USD{
+    background-color: #c7f0db;
+}
+
+.GBP {
+    background-color: #8bbabb;
+}
+
+.AUD {
+    background-color: #c7f0db;
+}
+
+.RUB {
+    background-color: #8bbabb;
+}
+
+ /* Location in the BarChart-Container Grid */
+.BarChart-BottomSection {
+    grid-row: 3;
+    grid-column: span 5;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px;
+
+    background-color: var(--navbar-color);
+    opacity: 1.0;
+}
+
+/* Bottom Section Labels for BarChart */
+.BarChart-Label {
+    grid-column: 1fr 1fr 1fr 1fr 1fr;
+    align-self: center;
+    justify-self: center;
+    height: 20px;
+    width: 30px;
+    border: 1px solid tomato;
+}
+
+.label-EUR { background-color: blue; }
+
+.label-USD{ background-color: red; }
+
+.label-GBP { background-color: navy; }
+
+.label-AUD { background-color: teal; }
+
+.label-RUB { background-color: lightsalmon; }
