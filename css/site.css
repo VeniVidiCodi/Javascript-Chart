@@ -1,9 +1,14 @@
 :root {
-    --navbar-color: #6c7b95;
+    --navbar-color: #464159;
     --margin-color: #464159;
-    --mainContentBG-color: #464159;
+    --mainContentBG-color: #6c7b95;
+    --barcolumn1-color:#8bbabb;
+    --barcolumn2-color:#c7f0db;
+    --barcolumn1-highlight: #80ecee;
+    --barcolumn2-highlight: #9effcd;
 }
-/* ColorHunt Palette 165518
+
+/* Palette 165518 (ColorHunt.com)
 #464159
 #6c7b95
 #8bbabb
@@ -11,6 +16,7 @@
  */
 
 
+/* Basic level containment */
 body {
     margin: 0;
     background: url('../img/world-map-halftone-dots-background_153132-185.jpg') no-repeat top center fixed;
@@ -24,7 +30,8 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation/Header Bar */
+
+/* Navigation-Title */
 .NavBar {
     grid-column: 1 / span 3;
     border: 1px solid black;
@@ -100,32 +107,41 @@ body {
 .BarChart-bar {
     grid-row: 1;
     align-self: end;
+
     text-align: center;
 
     background-color: white;
-    /* color: white; */
     padding-top: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-.EUR {
-    background-color: #8bbabb;
+.BarChart-bar:hover {
+    padding: 10px;
+    border: 1px solid white;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.USD{
-    background-color: #c7f0db;
+.BarChart-bar:nth-child(odd) {
+  background: #8bbabb;
 }
 
-.GBP {
-    background-color: #8bbabb;
+.BarChart-bar:nth-child(even) {
+  background: #c7f0db;
 }
 
-.AUD {
-    background-color: #c7f0db;
+.BarChart-bar:nth-child(odd):hover {
+    background-color: var(--barcolumn1-highlight);
+    transition: 0.75s;
 }
 
-.RUB {
-    background-color: #8bbabb;
+.BarChart-bar:nth-child(even):hover {
+    background-color: var(--barcolumn2-highlight);
+    transition: 0.75s;
 }
+
+
 
  /* Location in the BarChart-Container Grid */
 .BarChart-BottomSection {
@@ -149,22 +165,21 @@ body {
     width: 40px;
 }
 
-.label-EUR { 
 
+
+/* Labels below bar graph columns */
+/* 
+.label-EUR {
 }
 
 .label-USD {
-
 }
 
 .label-GBP {
-
 }
 
 .label-AUD {
-
 }
 
 .label-RUB { 
-
-}
+} */
