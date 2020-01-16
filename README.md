@@ -8,6 +8,7 @@ The data from the API is represented through a bar graph which adjusts according
 This graph displays the following currency exchange rates:
     
 | Symbol | Code  Name   Country/State     |     r      |    100/r   |     *.75 (adjust)   |
+| ------ | ------------------------------ | ---------- | ---------- | ---------- |
 |   €    | EUR (Euro - European Union)    |  * 1.0     |  * 100 %   |     75%    |
 |   $    | USD (Dollar - United States)   |    1.1142  |     90 %   |     67%    |
 |   £    | GBP (Pound - Great Britain)    |    0.85683 |    117 %   |     88%    |
