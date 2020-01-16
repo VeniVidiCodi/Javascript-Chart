@@ -16,7 +16,7 @@
  */
 
 
-/* Basic level containment */
+/* Basic level containment -------------------------------- */
 body {
     margin: 0;
     background: url('../img/world-map-halftone-dots-background_153132-185.jpg') no-repeat top center fixed;
@@ -28,6 +28,24 @@ body {
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: 70px 1fr;
     min-height: 100vh;
+}
+
+@media screen and (max-width: 922px) {
+    .Container {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 70px 1fr;
+        min-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Container {
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 70px 1fr;
+        min-height: 100vh;
+    }
 }
 
 
@@ -46,7 +64,7 @@ body {
 }
 
 
-/* Page Margins */
+/* Page Margins ------------------------------------------------ */
 .Margin-Left {
     grid-column: 1;
     grid-row: 2;
@@ -65,8 +83,21 @@ body {
     opacity: 0.7;
 }
 
+/* @media screen and (max-width: 600px) {
+    .Margin-Left{
+        display: flex;
+        width: 10%;
+  }
+  
+    .Margin-Right {
+        display: flex;
+        width: 20%;
+  }
+} */
 
-/* Center section with main content (bar graph) */
+
+
+/* Center section with main content (bar graph) --------------- */
 .MainContent {
     /* Location in the Container Grid */
     grid-column: 2;
@@ -92,7 +123,9 @@ body {
     /* border: 1px solid black; */
 }
 
-/* Point of Focus - Visual Data Set */
+
+
+/* Point of Focus - Visual Data Set --------------------------------- */
 .BarChart-container {
     /* Location in the MainContent Grid */
     grid-column: 1;
@@ -143,7 +176,7 @@ body {
 
 
 
- /* Location in the BarChart-Container Grid */
+ /* Location in the BarChart-Container Grid ------------------------ */
 .BarChart-BottomSection {
     grid-row: 3;
     grid-column: span 5;
@@ -156,7 +189,7 @@ body {
     opacity: 1.0;
 }
 
-/* Bottom Section Labels for BarChart */
+/* Bottom Section Labels for BarChart ------------------------------ */
 .BarChart-Label {
     grid-column: 1fr 1fr 1fr 1fr 1fr;
     align-self: center;
@@ -167,7 +200,7 @@ body {
 
 
 
-/* Labels below bar graph columns */
+/* Labels below bar graph columns ---------------------------------- */
 /* 
 .label-EUR {
 }
