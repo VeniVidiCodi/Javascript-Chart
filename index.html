@@ -3,7 +3,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="./css/site.css" />   
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -19,14 +19,24 @@
             <div class="BarChart-TopSection"></div>
 
             <div class="BarChart-container">
+
                 <div 
                     onclick="alert('EUR costs 0.88 pounds')"
                     class="BarChart-bar bar-EUR" 
                     style="height: 75%"> EUR <br> € </div>
+
+<!-- modifies -->
                 <div 
                     onclick="alert('USD costs 0.88 pounds')"
                     class="BarChart-bar bar-USD" 
-                    style="height: 67%"> USD <br> $ </div>
+                    style="height: 67%">
+                    <header class="bar-header">
+                        <p class="bar-title"> USD </p>
+                        <h2 class="bar-symbol"> $ </h2>
+                    </header> 
+                </div>
+
+
                 <div 
                     onclick="alert('GBP costs 0.88 pounds')"
                     class="BarChart-bar bar-GBP" 
@@ -40,6 +50,7 @@
                     onclick="alert('RUB costs 0.88 pounds')"
                     class="BarChart-bar bar-RUB" 
                     style="height: 5%"> RUB <br> ₽ </div>
+
             </div>
             
             <div class="BarChart-BottomSection">
@@ -70,5 +81,6 @@
         <div class="Margin-Right"></div>
         
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
