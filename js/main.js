@@ -6,7 +6,10 @@
 // • Must have a README.md that describes the data being used
 // • Must NOT use a pre-made charting library – you have to write your own!
 
-// Message on currency when bar is 
+let currencyKeys = [ "USD", "GBP", "AUD", "RUP" ]
+
+
+
 // Gets API and formats it into json
 fetch("https://api.exchangeratesapi.io/latest")
   .then((response) => response.json())
@@ -17,21 +20,25 @@ fetch("https://api.exchangeratesapi.io/latest")
     let date = data.date;
     for (let rate in rates) {
       console.log(rate);}
-    // Loop through API keyword pairs
+
+    // Loop through API keyword pairs an logs it
     for (let [key, value] of Object.entries(rates)) {
       console.log(`${key}: ${value}`);
-      
-      let chart = document.querySelector(".BarChart-container");
-      let height = 70;
-      let bar = document.createElement("div");
-      bar.classList.add("Bar");
-      bar.style.height = height + "%";
-      chart.appendChild(bar);
-
-
-
-
-    }
+      createBar(key, value);}   // Renders bar divs from state object
+    
   }); // end .then 
 
 
+
+
+// creates new bar for chart
+function createBar(key, value) {
+  let chart = document.querySelector(".BarChart-container");
+  let height = 100 / value;
+  let bar = document.createElement("div");
+  bar.classList.add("BarChart-bar");
+  bar.textContent = key;
+  bar.style.height = height + "%";
+  chart.appendChild(bar);
+  console.log(bar);
+}

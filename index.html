@@ -7,80 +7,75 @@
 </head>
 
 <body>
-    <div class="Container">
+    <div class="container">
 
-        <div class="NavBar">
+        <div class="navBar">
             <h1>International Currency Rates</h1>
         </div>
 
-        <div class="Margin-Left"></div>
-        <!-- <div class="MainContent-background"><div> -->
-        <div class="MainContent">
-            <div class="BarChart-TopSection"></div>
+        <div class="margin-left"></div>
+        
+        <div class="chart-container">
+            <div class="chart-topSection"></div>
 
-            <div class="BarChart-container">
+            <div class="chart-content">
 
+                <!-- <div>{currencyData}</div> -->
+                
                 <div 
                     onclick="alert('EUR costs 0.88 pounds')"
-                    class="BarChart-bar bar-EUR" 
+                    class="bar bar-EUR" 
                     style="height: 75%"> EUR <br> € </div>
 
-<!-- modifies -->
                 <div 
                     onclick="alert('USD costs 0.88 pounds')"
-                    class="BarChart-bar bar-USD" 
+                    class="bar bar-USD" 
                     style="height: 67%">
                     <header class="bar-header">
                         <p class="bar-title"> USD </p>
                         <h2 class="bar-symbol"> $ </h2>
-                    </header> 
-                </div>
+                    </header></div>
 
 
                 <div 
                     onclick="alert('GBP costs 0.88 pounds')"
-                    class="BarChart-bar bar-GBP" 
+                    class="bar bar-GBP" 
                     style="height: 88%"> GBP <br> £ </div>
 
                 <div 
                     onclick="alert('AUD costs 0.88 pounds')"
-                    class="BarChart-bar bar-AUD" 
+                    class="bar bar-AUD" 
                     style="height: 47%"> AUD <br> $ </div>
                 <div 
                     onclick="alert('RUB costs 0.88 pounds')"
-                    class="BarChart-bar bar-RUB" 
+                    class="bar bar-RUB" 
                     style="height: 5%"> RUB <br> ₽ </div>
 
-            </div>
             
-            <div class="BarChart-BottomSection">
-                <div class="BarChart-Label label-EUR" >
-                    <img src="img/flags-square/EU-500x334.gif" 
-                        alt="HTML Icon" height="30px" width="50px">
-                </div>
-                <div class="BarChart-Label label-USD" >
-                    <img src="img/flags-square/US-flag.png" 
-                        alt="HTML Icon" height="30px" width="50px">
-                </div>
-                <div class="BarChart-Label label-GBP" >
-                    <img 
-                        src="img/flags-square/1200px-Flag_of_the_United_Kingdom.svg_.png" 
-                        alt="HTML Icon" height="30px" width="50px">
-                </div>
-                <div class="BarChart-Label label-AUD" >
-                    <img src="img/flags-square/Flag_of_Australia_(converted).svg" 
-                        alt="HTML Icon" height="30px" width="50px">
-                </div>
-                <div class="BarChart-Label label-RUB" >
-                    <img src="img/flags-square/Russia-flag.svg" 
-                        alt="HTML Icon" height="30px" width="50px">
+            
+                <div class="chart-bottomSection">
+                    <div class="bar-flag label-EUR" >
+                        <img src="img/flags-square/EU-500x334.gif" 
+                            alt="HTML Icon" height="30px" width="50px"></div>
+                    <div class="bar-flag label-USD" >
+                        <img src="img/flags-square/US-flag.png" 
+                            alt="HTML Icon" height="30px" width="50px"></div>
+                    <div class="bar-flag label-GBP" >
+                        <img 
+                            src="img/flags-square/1200px-Flag_of_the_United_Kingdom.svg_.png" 
+                            alt="HTML Icon" height="30px" width="50px"></div>
+                    <div class="bar-flag label-AUD" >
+                        <img src="img/flags-square/Flag_of_Australia_(converted).svg" 
+                            alt="HTML Icon" height="30px" width="50px"></div>
+                    <div class="bar-flag label-RUB" >
+                        <img src="img/flags-square/Russia-flag.svg" 
+                            alt="HTML Icon" height="30px" width="50px"></div>
                 </div>
             </div>
-        </div>
-
-        <div class="Margin-Right"></div>
+        </div> 
+        <div class="margin-right"></div>
         
     </div>
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script> -->
 </body>
 </html>

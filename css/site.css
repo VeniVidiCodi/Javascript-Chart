@@ -16,22 +16,8 @@
  */
 
 
-/* Basic level containment -------------------------------- */
-body {
-    margin: 0;
-    background: url('../img/world-map-halftone-dots-background_153132-185.jpg') no-repeat top center fixed;
-    background-size: cover;
-}
-
-.Container {
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 70px 1fr;
-    min-height: 100vh;
-}
-
 @media screen and (max-width: 922px) {
-    .Container {
+    .container {
         display: grid;
         grid-template-columns: 10% 80% 10%;
         grid-template-rows: 70px 1fr;
@@ -40,7 +26,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .Container {
+    .container {
         display: grid;
         grid-template-columns: 5% 90% 5%;
         grid-template-rows: 70px 1fr;
@@ -49,23 +35,38 @@ body {
 }
 
 
-/* Navigation-Title */
-.NavBar {
+/* Basic level containment -------------------------------- */
+body {
+    margin: 0;
+    background: url('../img/world-map-halftone-dots-background_153132-185.jpg') no-repeat top center fixed;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 70px 1fr;
+    min-height: 100vh;
+}
+
+
+/* Navigation & Title ----------------------------------------- */
+.navBar {
     grid-column: 1 / span 3;
     border: 1px solid black;
     background-color: var(--navbar-color);
     z-index: 10;
 }
 
-.NavBar > h1 {
+.navBar > h1 {
     margin-top: 15px;
     text-align: center;
     color: #c7f0db;
 }
 
 
-/* Page Margins ------------------------------------------------ */
-.Margin-Left {
+/* Side Margins ----------------------------------------------- */
+.margin-left {
     grid-column: 1;
     grid-row: 2;
 
@@ -74,7 +75,7 @@ body {
     opacity: 0.7;
 }
 
-.Margin-Right {
+.margin-right {
     grid-column: 3;
     grid-row: 2;
 
@@ -83,23 +84,10 @@ body {
     opacity: 0.7;
 }
 
-/* @media screen and (max-width: 600px) {
-    .Margin-Left{
-        display: flex;
-        width: 10%;
-  }
-  
-    .Margin-Right {
-        display: flex;
-        width: 20%;
-  }
-} */
 
 
-
-/* Center section with main content (bar graph) --------------- */
-.MainContent {
-    /* Location in the Container Grid */
+/* Central Main Content Area ---------------------------- */
+.chart-container {
     grid-column: 2;
     grid-row: 2;
 
@@ -107,37 +95,40 @@ body {
     grid-template-rows: 50px 1fr;
     grid-template-columns: 1fr;
 }
-/* 
-.MainContent-background {
-    grid-column: 2;
-    grid-row: 2;
-    
-    background-color: var(--mainContentBG-color);
-    opacity: 0.9;
-} */
 
-.BarChart-TopSection {
+.chart-topSection {
     /* Location in the MainContent Grid */
     grid-row: 1;
     grid-column: 1;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
-
-
-/* Point of Focus - Visual Data Set --------------------------------- */
-.BarChart-container {
+.chart-content {
     /* Location in the MainContent Grid */
-    grid-column: 1;
     grid-row: 2;
-    grid-column-gap: 2px;
+    grid-column: 1;
+    column-gap: 2px;
     
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;     /* variable */
     grid-template-rows: 1fr;
 }
 
-.BarChart-bar {
+.chart-bottomSection {
+    grid-row: 3;
+    grid-column: span 5;                            /* variable */
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;     /* variable */
+    grid-template-rows: 70px;
+
+    background-color: var(--navbar-color);
+    opacity: 1.0;
+}
+
+
+/* Chart Breakdown --------------------------------------- */
+.bar {
     grid-row: 1;
     align-self: end;
 
@@ -149,27 +140,27 @@ body {
     border-top-right-radius: 5px;
 }
 
-.BarChart-bar:hover {
+.bar:hover {
     padding: 10px;
     border: 1px solid white;
     transition-timing-function: ease-in-out;
     transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.BarChart-bar:nth-child(odd) {
+.bar:nth-child(odd) {
   background: #8bbabb;
 }
 
-.BarChart-bar:nth-child(even) {
+.bar:nth-child(even) {
   background: #c7f0db;
 }
 
-.BarChart-bar:nth-child(odd):hover {
+.bar:nth-child(odd):hover {
     background-color: var(--barcolumn1-highlight);
     transition: 0.75s;
 }
 
-.BarChart-bar:nth-child(even):hover {
+.bar:nth-child(even):hover {
     background-color: var(--barcolumn2-highlight);
     transition: 0.75s;
 }
@@ -192,23 +183,7 @@ body {
     text-shadow: 0px 0px 10px black;
 }
 
-
-
- /* Location in the BarChart-Container Grid ------------------------ */
-.BarChart-BottomSection {
-    grid-row: 3;
-    grid-column: span 5;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 70px;
-
-    background-color: var(--navbar-color);
-    opacity: 1.0;
-}
-
-/* Bottom Section Labels for BarChart ------------------------------ */
-.BarChart-Label {
+.bar-flag {
     grid-column: 1fr 1fr 1fr 1fr 1fr;
     align-self: center;
     justify-self: center;
